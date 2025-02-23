@@ -1,0 +1,262 @@
+.footer__container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 0 20px;
+    padding-top: 42px;
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 40px;
+  }
+}
+
+.footer__position-block {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: start;
+  }
+}
+
+.footer__social-container {
+  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-right: 30px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+}
+
+.footer__image-container {
+  @media (min-width: $desktop-width) {
+    width: 318px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.footer__text {
+  margin: 0;
+  padding: 0;
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.footer__social-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  list-style-type: none;
+}
+
+.footer__social-link {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.footer__social-link:hover {
+  &:hover svg,
+  &:focus svg {
+    fill: $state-bakground-lighter;
+  }
+
+  &:active svg {
+    fill: $state-background-darker;
+  }
+}
+
+
+.footer__info-module-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.footer__info-module-item {
+  position: relative;
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    width: 222px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 317px;
+    padding: 0;
+  }
+}
+
+.footer__info-module-item::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 1px;
+  bottom: 0;
+  left: -20px;
+  background-color: $base-decoration-color;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.footer__info-module-item:first-child::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 1px;
+  top: 0;
+  left: -20px;
+  background-color: $base-decoration-color;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.footer__info-title {
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 2%;
+  color: $base-prime-decoration-color;
+}
+
+
+.footer__info-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style-type: none;
+}
+
+.footer__info-item {
+  display: flex;
+  justify-content: start;
+}
+
+.footer__info-link {
+  padding: 10px 0;
+  color: $base-color-text;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $state-bakground-lighter;
+  }
+
+  &:active {
+    color: $state-background-darker;
+  }
+}
+
+.footer__contacts-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+}
+
+.footer__contact {
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+  padding-left: 19px;
+  background-size: 13px 16px;
+  background-repeat: no-repeat;
+  background-position: left center top;
+}
+
+.footer__contact--point {
+  background-image: url("../../icons/point.svg");
+}
+
+.footer__contact--phone {
+  background-image: url("../../icons/phone.svg");
+}
+
+
+.footer__contact-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $base-color-text;
+  text-decoration: none;
+}
+
+.footer__contact-text--link {
+  &:hover,
+  &:focus {
+    color: $state-bakground-lighter;
+  }
+
+  &:active {
+    color: $state-background-darker;
+  }
+}
+
+.footer__developer-container {
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  width: 208px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__developer-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: $disabled-background-color;
+}
+
+.footer__developer-link {
+  &:hover,
+  &:focus {
+    fill: $state-bakground-lighter;
+  }
+
+  &:active {
+    fill: $state-background-darker;
+  }
+}

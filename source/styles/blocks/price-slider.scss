@@ -1,0 +1,120 @@
+.price-slider__slider {
+  width: 280px;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    width: 222px;
+  }
+}
+
+.price-slider__inputs {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: $disabled-background-color;
+  }
+}
+
+.price-slider__input {
+  width: 118px;
+  margin: 0;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  border: 2px solid $state-bakground-lighter;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 88px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+
+  &:not([disabled]):focus {
+    border: 2px solid $state-background-darker;
+  }
+
+  &:disabled {
+    border: 2px solid $base-background-light-gray;
+    color: $base-background-light-gray;
+    cursor: default;
+  }
+}
+
+.price-slider__target {
+  width: 280px;
+  height: 2px;
+  background-color: $base-background-light-gray;
+  border: none;
+  box-shadow: none;
+
+  @media (min-width: $tablet-width) {
+    width: 222px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.price-slider__connect {
+  height: 4px;
+  background-color: $state-bakground-lighter;
+}
+
+.price-slider__handle {
+  border-radius: 50%;
+  border: 2px solid $state-bakground-lighter;
+  background-color: $base-white-color;
+  box-shadow: none;
+  cursor: pointer;
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    display: none;
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: $base-prime-decoration-color;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    display: block;
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+
+  &:active::after {
+    background-color: $base-prime-decoration-color;
+  }
+}
+
+.price-slider__horizontal .price-slider__handle {
+  width: 24px;
+  height: 24px;
+  top: -10px;
+}

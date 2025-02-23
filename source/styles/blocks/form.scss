@@ -1,0 +1,297 @@
+.form__container {
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+    flex-direction: column;
+  }
+}
+
+.form__slider-container {
+  width: 280px;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    width: 222px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+
+.form__filters-title {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.form__filters-title--price {
+  margin-bottom: 25px;
+}
+
+.form__filter-group {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    width: 222px;
+    margin: 0;
+  }
+}
+
+.form__filter-group-list {
+  width: 280px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    width: 222px;
+  }
+}
+
+.form__filter-group-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 34px;
+  cursor: pointer;
+}
+
+.form__control-mark::before {
+  display: none;
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: $base-prime-decoration-color;
+}
+
+.form__control-input {
+  &:not([disabled]):hover + .form__control-mark,
+  &:not([disabled]):focus-visible + .form__control-mark {
+    outline: 2px solid $base-prime-decoration-color;
+    outline-offset: -2px;
+  }
+
+  &:checked + .form__control-mark {
+    outline: 2px solid $base-prime-decoration-color;
+    outline-offset: -2px;
+  }
+
+  &:checked + .form__control-mark::before {
+    display: block;
+  }
+
+  &:not([disabled]):hover + .form__control-mark::before,
+  &:not([disabled]):focus-visible + .form__control-mark::before {
+    display: block;
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+
+  &:disabled + .form__control-mark {
+    opacity: 0.25;
+    outline: 2px solid $base-color-text;
+    outline-offset: -2px;
+  }
+
+  &:disabled + .form__control-mark + .form__label {
+    opacity: 0.25;
+  }
+
+  &:disabled:checked + .form__control-mark::before {
+    display: block;
+    background-color: $base-color-text;
+  }
+}
+
+.form__control-mark {
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  left: 0;
+  border: 2px solid $disabled-background-color;
+}
+
+.form__label {
+  padding: 2px 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form__filter-checkbox-container {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    width: 222px;
+  }
+}
+
+.form__filter-checkbox-list {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.form__filter-checkbox {
+  display: inline-block;
+}
+
+.form__filter-checkbox-inner {
+  position: relative;
+  display: inline-block;
+  padding-left: 52px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 42px;
+    height: 24px;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+    background-color: $disabled-background-color;
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 2px;
+    top: 2px;
+    border-radius: 100%;
+    background-color: $base-white-color;
+  }
+}
+
+.form__filter-checkbox-input {
+  &:checked + .form__filter-checkbox-inner::before {
+    background-color: $base-prime-decoration-color;
+  }
+
+  &:checked + .form__filter-checkbox-inner::after {
+    left: 20px;
+  }
+
+  &:not([disabled]):hover + .form__filter-checkbox-inner::before,
+  &:not([disabled]):focus-visible + .form__filter-checkbox-inner::before {
+    outline: 2px solid $base-prime-decoration-color;
+    outline-offset: -2px;
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+
+  &:disabled + .form__filter-checkbox-inner {
+    opacity: 0.25;
+  }
+
+  &:disabled:checked + .form__filter-checkbox-inner::after {
+    background-color: $base-color-text;
+  }
+
+  &:disabled:checked + .form__filter-checkbox-inner::before {
+    background-color: $disabled-background-color;
+  }
+}
+
+
+.form__button-container {
+  width: 280px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: none;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 227px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 318px;
+    margin: 0;
+    margin-right: auto;
+  }
+}
+
+.form__button {
+  padding: 8px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 149px;
+  }
+}
+
+.form__button--apply {
+  background-color: $base-prime-decoration-color;
+  color: $base-white-color;
+}
+
+.form__button--reset {
+  background-color: $base-white-color;
+  color: $base-prime-decoration-color;
+}
