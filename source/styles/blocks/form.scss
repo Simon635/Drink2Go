@@ -42,14 +42,20 @@
 }
 
 .form__filters-title {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
+  padding: 0;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
 }
 
 .form__filters-title--price {
-  margin-bottom: 25px;
+  display: flex;
+  margin-bottom: 31px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 33px;
+  }
 }
 
 .form__filter-group {
@@ -70,7 +76,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   list-style-type: none;
 
   @media (min-width: $tablet-width) {
@@ -81,7 +87,7 @@
 .form__filter-group-control {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: start;
   padding-left: 34px;
   cursor: pointer;
 }
@@ -140,15 +146,15 @@
 .form__control-mark {
   position: absolute;
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   left: 0;
   border: 2px solid $disabled-background-color;
 }
 
 .form__label {
-  padding: 2px 0;
+  padding: 1px 0;
   font-size: 16px;
   line-height: 24px;
 }
@@ -249,7 +255,6 @@
   width: 280px;
   margin: 0;
   padding: 0;
-  padding-bottom: 4px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -257,13 +262,13 @@
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    width: 227px;
+    width: 277px;
     margin: 0 auto;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     width: 318px;
     margin: 0;
     margin-right: auto;
@@ -278,10 +283,12 @@
   line-height: 24px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     width: 149px;
   }
 }
@@ -289,9 +296,33 @@
 .form__button--apply {
   background-color: $base-prime-decoration-color;
   color: $base-white-color;
+
+  @media (min-width: $tablet-width) {
+    width: 137px;
+  }
 }
 
 .form__button--reset {
   background-color: $base-white-color;
   color: $base-prime-decoration-color;
+
+  @media (min-width: $tablet-width) {
+    width: 120px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $state-bakground-lighter;
+    color: $base-white-color;
+  }
+
+  &:active {
+    background-color: $state-background-darker;
+    color: $base-white-color;
+  }
+
+  &:disabled {
+    background-color: $base-background-light-gray;
+    opacity: 0.25;
+  }
 }

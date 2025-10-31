@@ -1,14 +1,14 @@
 .logo {
   margin-right: 88px;
-  padding: 12px 0;
+  padding-top: 12px;
 
   @media (min-width: $tablet-width) {
     margin-right: 67px;
-    padding: 22px 0;
+    padding-top: 22px;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: 20px;
-    padding: 20px 0;
+    padding-top: 22px;
   }
 }

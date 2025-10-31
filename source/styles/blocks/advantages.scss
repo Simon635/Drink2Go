@@ -12,6 +12,7 @@
   @media (min-width: $desktop-width) {
     width: 1440px;
     padding: 0 40px;
+    padding-top: 100px;
   }
 }
 
@@ -24,9 +25,13 @@
   font-weight: 700;
   line-height: 16px;
   color: $base-prime-decoration-color;
-  letter-spacing: 4%;
+  letter-spacing: 0.5px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 3px;
+  }
 }
 
 .advantages__text {
@@ -40,32 +45,32 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    width: 728px;
+    width: 709px;
     margin-bottom: 60px;
     font-size: 42px;
     line-height: 64px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 80px;
+    width: 1360px;
+    margin-bottom: 81px;
   }
 }
 
 .advantages__list {
   margin: 0;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   gap: 32px;
   list-style-type: none;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
-    row-gap: 50px;
-    column-gap: 30px;
-    flex-wrap: wrap;
+    margin-bottom: 100px;
+    flex-flow: row wrap;
+    gap: 50px 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -75,10 +80,9 @@
 }
 
 .advantages__item {
+  width: 280px;
   padding-top: 66px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  box-sizing: border-box;
 
   background-size: 50px 56px;
   background-repeat: no-repeat;
@@ -89,7 +93,6 @@
     padding-top: 0;
     padding-left: 72px;
     align-items: start;
-    box-sizing: border-box;
     background-size: 52px 56px;
     background-position: top left;
   }
@@ -104,19 +107,19 @@
 }
 
 .advantages__item--speed {
-  background-image: url('../../icons/speed.svg');
+  background-image: url("../../icons/speed.svg");
 }
 
 .advantages__item--convenience {
-  background-image: url('../../icons/convenience.svg');
+  background-image: url("../../icons/convenience.svg");
 }
 
 .advantages__item--cheerfulness {
-  background-image: url('../../icons/cheerfulness.svg');
+  background-image: url("../../icons/cheerfulness.svg");
 }
 
 .advantages__item--ecology {
-  background-image: url('../../icons/ecology.svg');
+  background-image: url("../../icons/ecology.svg");
 }
 
 .advantages__item-title {
@@ -125,11 +128,17 @@
   padding: 0;
   font-size: 18px;
   line-height: 32px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 10px;
     font-size: 24px;
     line-height: 36px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
   }
 }
 

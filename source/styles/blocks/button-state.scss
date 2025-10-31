@@ -1,6 +1,6 @@
 .button-state {
   &:hover,
-  &:focus {
+  &:focus-visible {
     background-color: $state-bakground-lighter;
   }
 
